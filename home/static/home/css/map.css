@@ -1,0 +1,6 @@
+/* Google Map Height Fix */
+.google_map {
+    min-height: 500px;
+    height:100%;
+    width:100%;
+}

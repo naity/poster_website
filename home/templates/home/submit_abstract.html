@@ -1,0 +1,42 @@
+<section class="bg-dark text-white">
+    <div class="container">
+        <form id="submission_form" action="{% url 'home:submit_abstract' %}" method="post">
+            {% csrf_token %}
+
+            {% for field in author_form %}
+                <div class="form-group row">
+                    <label for="{{ field.id_for_label }}" class="col-sm-2 col-form-label">{{ field.label }}</label>
+                    <div class="col-sm-10">
+                        {{ field }}
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% for field in abstract_form %}
+                <div class="form-group row">
+                    <label for="{{ field.id_for_label }}" class="col-sm-2 col-form-label">{{ field.label }}</label>
+                    <div class="col-sm-10">
+                        {{ field }}
+                    </div>
+                </div>
+            {% endfor %}
+
+            <div class="form-check">
+                <div class="col-sm-10 offset-sm-2">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        Check me out
+                    </label>
+                    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                </div>
+            </div>
+
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary" id="submitAbstract">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+

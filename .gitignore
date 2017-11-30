@@ -1,0 +1,9 @@
+*.pyo
+*.pyc
+*.bak
+
+# Database
+*.sqlite3
+
+# local setting
+ftd_2018/local_settings.py

@@ -1,0 +1,19 @@
+{% extends "home/base.html" %}
+
+{% load staticfiles %}
+
+{% block head_block %}
+    <meta http-equiv="refresh" content="5;url={% url 'home:index' %}"/>
+{% endblock %}
+
+{% block body_block %}
+    <div class="container">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Submission failed!</h4>
+                <p>Please make sure that your abstract text is within the 300-word limit. You will be redirected in 5 seconds... </p>
+                <p>Or click <a href="{% url 'home:index' %}"><span style="color:#4169E1">here</span></a> to go back...</p>
+        </div>
+    </div>
+{% endblock %} 
+
+
