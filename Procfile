@@ -1,1 +1,1 @@
-web: gunicorn mywebsite.wsgi --log-file -
+web: gunicorn ftd_2018.wsgi --log-file -
